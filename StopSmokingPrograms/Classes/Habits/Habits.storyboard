@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="N9x-GQ-4Hw">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Basic Navigation View Controller-->
+        <scene sceneID="w8t-PZ-N3D">
+            <objects>
+                <navigationController id="N9x-GQ-4Hw" customClass="BasicNavigationViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="01B-57-HXK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6xn-Ly-DLn" kind="relationship" relationship="rootViewController" id="OxX-1H-xMD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOd-bD-0MW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1330.5" y="63"/>
+        </scene>
+        <!--吸烟习惯-->
+        <scene sceneID="Njr-PI-vpt">
+            <objects>
+                <viewController id="6xn-Ly-DLn" customClass="HabitsViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="71a-yO-XX5"/>
+                        <viewControllerLayoutGuide type="bottom" id="8oc-Ze-VNh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gz2-uJ-K0g">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dh0-93-Ifg">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6xn-Ly-DLn" id="6w1-vE-ZWQ"/>
+                                    <outlet property="delegate" destination="6xn-Ly-DLn" id="K9g-Jj-xWc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dh0-93-Ifg" secondAttribute="trailing" id="BXZ-nb-xeH"/>
+                            <constraint firstItem="dh0-93-Ifg" firstAttribute="leading" secondItem="Gz2-uJ-K0g" secondAttribute="leading" id="Pb9-Tb-0Ju"/>
+                            <constraint firstItem="8oc-Ze-VNh" firstAttribute="top" secondItem="dh0-93-Ifg" secondAttribute="bottom" id="V9U-c6-IDb"/>
+                            <constraint firstItem="dh0-93-Ifg" firstAttribute="top" secondItem="71a-yO-XX5" secondAttribute="bottom" id="wI3-AZ-jko"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="dh0-93-Ifg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="V9U-c6-IDb"/>
+                                <exclude reference="BXZ-nb-xeH"/>
+                                <exclude reference="Pb9-Tb-0Ju"/>
+                                <exclude reference="wI3-AZ-jko"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="dh0-93-Ifg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="V9U-c6-IDb"/>
+                                <include reference="BXZ-nb-xeH"/>
+                                <include reference="Pb9-Tb-0Ju"/>
+                                <include reference="wI3-AZ-jko"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="吸烟习惯" id="VME-WL-vyT">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="MHI-4d-c1k">
+                            <connections>
+                                <action selector="goback:" destination="6xn-Ly-DLn" id="j8s-p7-Qd5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="dh0-93-Ifg" id="jSC-eH-6Sm"/>
+                        <segue destination="SgN-ZN-JOA" kind="show" identifier="smokedPerDay" id="JtZ-ve-7OD"/>
+                        <segue destination="xFY-a7-NzH" kind="show" identifier="smokingYears" id="y0M-ri-zXE"/>
+                        <segue destination="UHa-4P-Bm3" kind="show" identifier="smokingPrice" id="DBB-tN-kB3"/>
+                        <segue destination="aMu-Bu-q62" kind="show" identifier="nicotineLevel" id="Ggq-hQ-enF"/>
+                        <segue destination="2M5-cu-eQ7" kind="show" identifier="userAge" id="S3x-vI-Smr"/>
+                        <segue destination="zAA-xd-GoN" kind="show" identifier="nonSmokeSince" id="sid-sq-csf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZ4-yk-bgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-592.5" y="63"/>
+        </scene>
+        <!--烟龄-->
+        <scene sceneID="PuY-AF-MI5">
+            <objects>
+                <viewController title="烟龄" id="xFY-a7-NzH" customClass="SmokingYearsViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ePb-k0-SZQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="pno-iU-NQS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fr7-cp-7SI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户从哪一年开始吸烟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61h-fq-vTI">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5N-vM-0BS">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xFY-a7-NzH" id="KJR-Oj-EBB"/>
+                                    <outlet property="delegate" destination="xFY-a7-NzH" id="4l3-SS-I8c"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F5N-vM-0BS" firstAttribute="leading" secondItem="Fr7-cp-7SI" secondAttribute="leading" id="6ia-pG-cwf"/>
+                            <constraint firstAttribute="trailing" secondItem="61h-fq-vTI" secondAttribute="trailing" id="BLd-DM-7t2"/>
+                            <constraint firstItem="61h-fq-vTI" firstAttribute="top" secondItem="ePb-k0-SZQ" secondAttribute="bottom" constant="10" id="PoR-D6-1Hf"/>
+                            <constraint firstItem="61h-fq-vTI" firstAttribute="leading" secondItem="Fr7-cp-7SI" secondAttribute="leading" id="cDH-tT-WqV"/>
+                            <constraint firstAttribute="trailing" secondItem="F5N-vM-0BS" secondAttribute="trailing" id="sqL-wC-zD9"/>
+                            <constraint firstItem="F5N-vM-0BS" firstAttribute="top" secondItem="61h-fq-vTI" secondAttribute="bottom" constant="10" id="zBr-rX-v2J"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="61h-fq-vTI"/>
+                                <exclude reference="F5N-vM-0BS"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6ia-pG-cwf"/>
+                                <exclude reference="sqL-wC-zD9"/>
+                                <exclude reference="zBr-rX-v2J"/>
+                                <exclude reference="BLd-DM-7t2"/>
+                                <exclude reference="PoR-D6-1Hf"/>
+                                <exclude reference="cDH-tT-WqV"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="61h-fq-vTI"/>
+                                <include reference="F5N-vM-0BS"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6ia-pG-cwf"/>
+                                <include reference="sqL-wC-zD9"/>
+                                <include reference="zBr-rX-v2J"/>
+                                <include reference="BLd-DM-7t2"/>
+                                <include reference="PoR-D6-1Hf"/>
+                                <include reference="cDH-tT-WqV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="F5N-vM-0BS" id="ycS-NH-YOw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEZ-AF-Meu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1459.5" y="-964"/>
+        </scene>
+        <!--平均每包烟价格-->
+        <scene sceneID="VsL-eV-HSv">
+            <objects>
+                <viewController title="平均每包烟价格" id="UHa-4P-Bm3" customClass="SmokingPriceViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T0D-sR-AsT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vxu-Lg-tBA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2hR-cv-NnQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平均每包烟的价格" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3x-YK-2vd">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="元 / 包" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7V-oS-FDc">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZG-JX-FV8">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="UHa-4P-Bm3" id="PFT-5q-2dM"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CZG-JX-FV8" firstAttribute="top" secondItem="I3x-YK-2vd" secondAttribute="bottom" constant="10" id="Hna-tX-veu">
+                                <variation key="widthClass=compact" constant="15"/>
+                            </constraint>
+                            <constraint firstItem="e7V-oS-FDc" firstAttribute="centerY" secondItem="CZG-JX-FV8" secondAttribute="centerY" id="NEQ-cE-XmG"/>
+                            <constraint firstAttribute="trailing" secondItem="I3x-YK-2vd" secondAttribute="trailing" id="Qtj-7k-6gf"/>
+                            <constraint firstItem="CZG-JX-FV8" firstAttribute="width" secondItem="2hR-cv-NnQ" secondAttribute="width" multiplier="1:4" id="R07-0g-9CU"/>
+                            <constraint firstItem="I3x-YK-2vd" firstAttribute="leading" secondItem="2hR-cv-NnQ" secondAttribute="leading" id="RoW-oF-md2"/>
+                            <constraint firstItem="e7V-oS-FDc" firstAttribute="leading" secondItem="CZG-JX-FV8" secondAttribute="trailing" constant="10" id="UFK-j0-Z6f"/>
+                            <constraint firstItem="I3x-YK-2vd" firstAttribute="top" secondItem="T0D-sR-AsT" secondAttribute="bottom" constant="10" id="bAT-j8-fQS"/>
+                            <constraint firstItem="CZG-JX-FV8" firstAttribute="centerX" secondItem="2hR-cv-NnQ" secondAttribute="centerX" id="mi7-VE-qpi">
+                                <variation key="widthClass=compact" constant="-30"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="I3x-YK-2vd"/>
+                                <exclude reference="e7V-oS-FDc"/>
+                                <exclude reference="CZG-JX-FV8"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Hna-tX-veu"/>
+                                <exclude reference="R07-0g-9CU"/>
+                                <exclude reference="mi7-VE-qpi"/>
+                                <exclude reference="Qtj-7k-6gf"/>
+                                <exclude reference="RoW-oF-md2"/>
+                                <exclude reference="bAT-j8-fQS"/>
+                                <exclude reference="NEQ-cE-XmG"/>
+                                <exclude reference="UFK-j0-Z6f"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="I3x-YK-2vd"/>
+                                <include reference="e7V-oS-FDc"/>
+                                <include reference="CZG-JX-FV8"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Hna-tX-veu"/>
+                                <include reference="R07-0g-9CU"/>
+                                <include reference="mi7-VE-qpi"/>
+                                <include reference="Qtj-7k-6gf"/>
+                                <include reference="RoW-oF-md2"/>
+                                <include reference="bAT-j8-fQS"/>
+                                <include reference="NEQ-cE-XmG"/>
+                                <include reference="UFK-j0-Z6f"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="CZG-JX-FV8" id="CeC-uz-rY9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8G-jd-yjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2521.5" y="-361"/>
+        </scene>
+        <!--戒烟开始时间-->
+        <scene sceneID="F1Y-Tg-s0T">
+            <objects>
+                <viewController title="戒烟开始时间" id="zAA-xd-GoN" customClass="NonSmokeSinceViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xSC-o3-RBz"/>
+                        <viewControllerLayoutGuide type="bottom" id="K0c-Fd-4Fh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bi1-1C-tpt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="戒烟开始日期" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78E-6B-sJ7">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EAT-bb-CLy">
+                                <rect key="frame" x="-160" y="-108" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="467349415.19504499">
+                                    <!--2015-10-24 03:16:55 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="zh"/>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="78E-6B-sJ7" firstAttribute="top" secondItem="xSC-o3-RBz" secondAttribute="bottom" constant="10" id="77S-Fj-yFJ"/>
+                            <constraint firstAttribute="trailing" secondItem="EAT-bb-CLy" secondAttribute="trailing" id="7SH-jU-3zS"/>
+                            <constraint firstItem="EAT-bb-CLy" firstAttribute="leading" secondItem="Bi1-1C-tpt" secondAttribute="leading" id="C4a-31-EcZ"/>
+                            <constraint firstItem="78E-6B-sJ7" firstAttribute="leading" secondItem="Bi1-1C-tpt" secondAttribute="leading" id="CMn-f3-NaN"/>
+                            <constraint firstAttribute="trailing" secondItem="78E-6B-sJ7" secondAttribute="trailing" id="Mli-9D-YhQ"/>
+                            <constraint firstItem="EAT-bb-CLy" firstAttribute="top" secondItem="78E-6B-sJ7" secondAttribute="bottom" constant="10" id="h01-F4-6Jg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="78E-6B-sJ7"/>
+                                <exclude reference="EAT-bb-CLy"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="77S-Fj-yFJ"/>
+                                <exclude reference="CMn-f3-NaN"/>
+                                <exclude reference="Mli-9D-YhQ"/>
+                                <exclude reference="7SH-jU-3zS"/>
+                                <exclude reference="C4a-31-EcZ"/>
+                                <exclude reference="h01-F4-6Jg"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="78E-6B-sJ7"/>
+                                <include reference="EAT-bb-CLy"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="77S-Fj-yFJ"/>
+                                <include reference="CMn-f3-NaN"/>
+                                <include reference="Mli-9D-YhQ"/>
+                                <include reference="7SH-jU-3zS"/>
+                                <include reference="C4a-31-EcZ"/>
+                                <include reference="h01-F4-6Jg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="EAT-bb-CLy" id="urc-Mi-iFQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sen-RO-Vxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409.5" y="1552"/>
+        </scene>
+        <!--用户年龄-->
+        <scene sceneID="QhO-u1-sFv">
+            <objects>
+                <viewController title="用户年龄" id="2M5-cu-eQ7" customClass="UserAgeViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M1N-Dx-tlS"/>
+                        <viewControllerLayoutGuide type="bottom" id="WMq-Io-Zlr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a3e-qH-3aM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户出生年份" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQ7-6y-BYv">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnt-di-65c">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2M5-cu-eQ7" id="mLh-sU-Dwj"/>
+                                    <outlet property="delegate" destination="2M5-cu-eQ7" id="2ih-zH-mRA"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vQ7-6y-BYv" secondAttribute="trailing" id="1Oi-lh-URB"/>
+                            <constraint firstItem="jnt-di-65c" firstAttribute="leading" secondItem="a3e-qH-3aM" secondAttribute="leading" id="5sv-th-15N"/>
+                            <constraint firstItem="vQ7-6y-BYv" firstAttribute="leading" secondItem="a3e-qH-3aM" secondAttribute="leading" id="Gwz-57-NR8"/>
+                            <constraint firstItem="jnt-di-65c" firstAttribute="top" secondItem="vQ7-6y-BYv" secondAttribute="bottom" constant="10" id="Knk-5h-E4t"/>
+                            <constraint firstAttribute="trailing" secondItem="jnt-di-65c" secondAttribute="trailing" id="NlR-Xr-QL1"/>
+                            <constraint firstItem="vQ7-6y-BYv" firstAttribute="top" secondItem="M1N-Dx-tlS" secondAttribute="bottom" constant="10" id="dTu-r0-aCm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vQ7-6y-BYv"/>
+                                <exclude reference="jnt-di-65c"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="5sv-th-15N"/>
+                                <exclude reference="Knk-5h-E4t"/>
+                                <exclude reference="NlR-Xr-QL1"/>
+                                <exclude reference="1Oi-lh-URB"/>
+                                <exclude reference="Gwz-57-NR8"/>
+                                <exclude reference="dTu-r0-aCm"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="vQ7-6y-BYv"/>
+                                <include reference="jnt-di-65c"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="5sv-th-15N"/>
+                                <include reference="Knk-5h-E4t"/>
+                                <include reference="NlR-Xr-QL1"/>
+                                <include reference="1Oi-lh-URB"/>
+                                <include reference="Gwz-57-NR8"/>
+                                <include reference="dTu-r0-aCm"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="jnt-di-65c" id="R3k-a8-xDi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHY-q6-N4Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1459.5" y="1196"/>
+        </scene>
+        <!--尼古丁含量-->
+        <scene sceneID="HjB-dJ-Sjc">
+            <objects>
+                <viewController title="尼古丁含量" id="aMu-Bu-q62" customClass="NicotineLevelViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4ue-wb-5sR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hjs-7m-jtj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A9u-sZ-qQ6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每支烟的尼古丁含量（单位：mg）" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfl-Vj-jB1">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Tv-Hv-nhn">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="aMu-Bu-q62" id="Wta-Tw-EOr"/>
+                                    <outlet property="delegate" destination="aMu-Bu-q62" id="ZkD-EL-7nY"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1Tv-Hv-nhn" secondAttribute="trailing" id="C8G-gX-KH1"/>
+                            <constraint firstItem="1Tv-Hv-nhn" firstAttribute="leading" secondItem="A9u-sZ-qQ6" secondAttribute="leading" id="TEh-bt-NWa"/>
+                            <constraint firstAttribute="trailing" secondItem="Nfl-Vj-jB1" secondAttribute="trailing" id="Xlh-Sk-jlY"/>
+                            <constraint firstItem="1Tv-Hv-nhn" firstAttribute="top" secondItem="Nfl-Vj-jB1" secondAttribute="bottom" constant="10" id="ZwC-av-WFn"/>
+                            <constraint firstItem="Nfl-Vj-jB1" firstAttribute="top" secondItem="4ue-wb-5sR" secondAttribute="bottom" constant="10" id="iEg-mY-L6h"/>
+                            <constraint firstItem="Nfl-Vj-jB1" firstAttribute="leading" secondItem="A9u-sZ-qQ6" secondAttribute="leading" id="mHT-a4-M2g"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Nfl-Vj-jB1"/>
+                                <exclude reference="1Tv-Hv-nhn"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="C8G-gX-KH1"/>
+                                <exclude reference="TEh-bt-NWa"/>
+                                <exclude reference="ZwC-av-WFn"/>
+                                <exclude reference="Xlh-Sk-jlY"/>
+                                <exclude reference="iEg-mY-L6h"/>
+                                <exclude reference="mHT-a4-M2g"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Nfl-Vj-jB1"/>
+                                <include reference="1Tv-Hv-nhn"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="C8G-gX-KH1"/>
+                                <include reference="TEh-bt-NWa"/>
+                                <include reference="ZwC-av-WFn"/>
+                                <include reference="Xlh-Sk-jlY"/>
+                                <include reference="iEg-mY-L6h"/>
+                                <include reference="mHT-a4-M2g"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="1Tv-Hv-nhn" id="kmb-tb-FE9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1fW-6b-1ZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2521.5" y="608"/>
+        </scene>
+        <!--每天吸烟支数-->
+        <scene sceneID="Wle-Ke-eHV">
+            <objects>
+                <viewController title="每天吸烟支数" id="SgN-ZN-JOA" customClass="SmokedPerDayViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PLR-yN-7Pz"/>
+                        <viewControllerLayoutGuide type="bottom" id="3ZN-Tl-oUk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Reg-NX-LiI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平常用户每天消耗的传统纸烟（单位:支）" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxD-Pt-syQ">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="In5-O8-Nef">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SgN-ZN-JOA" id="qc4-Yh-Qbm"/>
+                                    <outlet property="delegate" destination="SgN-ZN-JOA" id="xA6-kE-lcG"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="In5-O8-Nef" secondAttribute="trailing" id="04f-RX-bqj"/>
+                            <constraint firstItem="In5-O8-Nef" firstAttribute="top" secondItem="FxD-Pt-syQ" secondAttribute="bottom" constant="10" id="34j-Ic-5ex"/>
+                            <constraint firstItem="FxD-Pt-syQ" firstAttribute="top" secondItem="PLR-yN-7Pz" secondAttribute="bottom" constant="10" id="5Sw-g7-STw"/>
+                            <constraint firstItem="FxD-Pt-syQ" firstAttribute="leading" secondItem="Reg-NX-LiI" secondAttribute="leading" id="9G9-cK-qEx"/>
+                            <constraint firstItem="In5-O8-Nef" firstAttribute="top" secondItem="FxD-Pt-syQ" secondAttribute="bottom" constant="10" id="b4V-ls-gon"/>
+                            <constraint firstItem="In5-O8-Nef" firstAttribute="leading" secondItem="Reg-NX-LiI" secondAttribute="leading" id="oKx-hv-dfE"/>
+                            <constraint firstAttribute="trailing" secondItem="FxD-Pt-syQ" secondAttribute="trailing" id="pgA-t8-NBn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="FxD-Pt-syQ"/>
+                                <exclude reference="In5-O8-Nef"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="04f-RX-bqj"/>
+                                <exclude reference="34j-Ic-5ex"/>
+                                <exclude reference="b4V-ls-gon"/>
+                                <exclude reference="oKx-hv-dfE"/>
+                                <exclude reference="5Sw-g7-STw"/>
+                                <exclude reference="9G9-cK-qEx"/>
+                                <exclude reference="pgA-t8-NBn"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="FxD-Pt-syQ"/>
+                                <include reference="In5-O8-Nef"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="04f-RX-bqj"/>
+                                <include reference="34j-Ic-5ex"/>
+                                <include reference="b4V-ls-gon"/>
+                                <include reference="oKx-hv-dfE"/>
+                                <include reference="5Sw-g7-STw"/>
+                                <include reference="9G9-cK-qEx"/>
+                                <include reference="pgA-t8-NBn"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="informationLabel" destination="FxD-Pt-syQ" id="P4N-Cy-83v"/>
+                        <outlet property="pickerView" destination="In5-O8-Nef" id="dKQ-4o-eqy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="urc-ng-heq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409.5" y="-1411"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,70 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - AVOSCloud (3.1.6.8)
+  - AWCollectionViewDialLayout (0.1.0)
+  - Crashlytics (3.4.1):
+    - Fabric (~> 1.6.0)
+  - Fabric (1.6.1)
+  - JDStatusBarNotification (1.5.3)
+  - Parallax (0.0.3)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - skpsmtpmessage (0.0.1)
+  - SVProgressHUD (HEAD based on 2.0-beta)
+  - TPKeyboardAvoiding (1.2.11)
+  - WYPopoverController (0.3.8)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.5.4)
+  - AVOSCloud (~> 3.1.6.8)
+  - AWCollectionViewDialLayout (~> 0.1.0)
+  - Crashlytics
+  - Fabric
+  - JDStatusBarNotification (~> 1.5.2)
+  - Parallax (~> 0.0.3)
+  - ReactiveCocoa (~> 2.5)
+  - skpsmtpmessage (~> 0.0.1)
+  - SVProgressHUD (HEAD)
+  - TPKeyboardAvoiding (~> 1.2.10)
+  - WYPopoverController (~> 0.3.8)
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  AVOSCloud: 4b06ec4444ca0ee0543e6cf729b11e5f3f956977
+  AWCollectionViewDialLayout: 6e4df94759ea6b39cf3639d9612ca77dae4bb2ea
+  Crashlytics: 41574a245bc6ae10c55d57f385ebd2004e5bee05
+  Fabric: bf0ceb04e7c924090efc5f8c55e4fbcca189e0a0
+  JDStatusBarNotification: 29413865af11c862c17180610b0f46a21118b412
+  Parallax: d9fb33d4f7e07999bcf4d83877397490dd94c321
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  skpsmtpmessage: f6e913380c784dd8d4a9f83c8790a302445a5e05
+  SVProgressHUD: c83337f10ed32d701c423d519059a249973c8662
+  TPKeyboardAvoiding: e5ce146b313de063957bfa75a13f1e9b0ff18ab7
+  WYPopoverController: dda54780e1bef186464ae5a10ab9b4998c279e89
+
+COCOAPODS: 0.38.2

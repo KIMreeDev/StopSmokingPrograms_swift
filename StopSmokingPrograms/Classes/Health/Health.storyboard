@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oy0-e1-al6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Basic Navigation View Controller-->
+        <scene sceneID="FvS-Ew-BiZ">
+            <objects>
+                <navigationController id="oy0-e1-al6" customClass="BasicNavigationViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VAs-HZ-N9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TOD-Dw-JJT" kind="relationship" relationship="rootViewController" id="Tja-lM-Fcx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2SZ-C0-HE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="382"/>
+        </scene>
+        <!--健康恢复-->
+        <scene sceneID="JG5-3L-TbY">
+            <objects>
+                <viewController id="TOD-Dw-JJT" customClass="HealthRecoveryViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dPu-Zt-k82"/>
+                        <viewControllerLayoutGuide type="bottom" id="7nM-Rr-mV1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aNt-My-z6O">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pZz-dy-9RY">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="TOD-Dw-JJT" id="aYr-eT-FiH"/>
+                                    <outlet property="delegate" destination="TOD-Dw-JJT" id="D1L-5P-WnT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7nM-Rr-mV1" firstAttribute="top" secondItem="pZz-dy-9RY" secondAttribute="bottom" id="3JE-Dy-zKr"/>
+                            <constraint firstAttribute="trailing" secondItem="pZz-dy-9RY" secondAttribute="trailing" id="HP6-Oa-ltK"/>
+                            <constraint firstItem="pZz-dy-9RY" firstAttribute="leading" secondItem="aNt-My-z6O" secondAttribute="leading" id="IGb-TT-GXx"/>
+                            <constraint firstItem="pZz-dy-9RY" firstAttribute="top" secondItem="dPu-Zt-k82" secondAttribute="bottom" id="x4J-ck-hts"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="pZz-dy-9RY"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3JE-Dy-zKr"/>
+                                <exclude reference="HP6-Oa-ltK"/>
+                                <exclude reference="IGb-TT-GXx"/>
+                                <exclude reference="x4J-ck-hts"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="pZz-dy-9RY"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3JE-Dy-zKr"/>
+                                <include reference="HP6-Oa-ltK"/>
+                                <include reference="IGb-TT-GXx"/>
+                                <include reference="x4J-ck-hts"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="健康恢复" id="tvQ-Fk-EL9">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="aMI-fF-mwz">
+                            <connections>
+                                <action selector="goback:" destination="TOD-Dw-JJT" id="Spv-xi-rnT"/>
+                            </connections>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="backBarButtonItem" destination="aMI-fF-mwz" id="cGf-bF-JAH"/>
+                        </connections>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="pZz-dy-9RY" id="9bd-Ei-eI7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWh-fx-3ML" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837" y="382"/>
+        </scene>
+    </scenes>
+</document>

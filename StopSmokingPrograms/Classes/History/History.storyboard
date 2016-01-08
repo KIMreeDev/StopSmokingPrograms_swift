@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RQm-hy-G0w">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Basic Navigation View Controller-->
+        <scene sceneID="7RZ-hd-ANM">
+            <objects>
+                <navigationController id="RQm-hy-G0w" customClass="BasicNavigationViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ch7-EE-xcS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pj3-0h-ejD" kind="relationship" relationship="rootViewController" id="wbn-Tf-62r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IU9-ZW-8b4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-985.5" y="-3"/>
+        </scene>
+        <!--Basic Navigation View Controller-->
+        <scene sceneID="OeD-vn-E2F">
+            <objects>
+                <navigationController storyboardIdentifier="history_setting" id="MCs-K6-LZd" customClass="BasicNavigationViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2vm-er-qgd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0Md-PM-W9O" kind="relationship" relationship="rootViewController" id="62w-3J-MKR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="08W-Ui-bZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-705" y="-928"/>
+        </scene>
+        <!--设置-->
+        <scene sceneID="z0O-Jf-iVP">
+            <objects>
+                <tableViewController id="0Md-PM-W9O" customClass="HistorySettingViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="zSi-x4-zIt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection id="xT9-d2-cTe">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="tKb-79-yY3" style="IBUITableViewCellStyleDefault" id="9ad-3S-sEN">
+                                        <rect key="frame" x="0.0" y="99" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9ad-3S-sEN" id="ycD-5r-wm9">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="3天" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tKb-79-yY3">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Zth-XE-cbv" style="IBUITableViewCellStyleDefault" id="cdE-gP-NOY">
+                                        <rect key="frame" x="0.0" y="143" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cdE-gP-NOY" id="wJ0-TZ-Fgr">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="一周" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zth-XE-cbv">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="02A-WE-9Qk" style="IBUITableViewCellStyleDefault" id="NIj-q0-g6i">
+                                        <rect key="frame" x="0.0" y="187" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NIj-q0-g6i" id="HPr-5Q-7uK">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="一个月" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="02A-WE-9Qk">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="0Md-PM-W9O" id="goU-X4-U2E"/>
+                            <outlet property="delegate" destination="0Md-PM-W9O" id="Awy-wi-q6y"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="设置" id="HI6-qG-5Kc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qg0-3c-STb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24" y="-928"/>
+        </scene>
+        <!--History Tab Bar View Controller-->
+        <scene sceneID="bTL-9s-4x2">
+            <objects>
+                <tabBarController id="pj3-0h-ejD" customClass="HistoryTabBarViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="wRL-ln-dW2"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="fL4-RJ-Jtt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="luD-qA-J7F" kind="relationship" relationship="viewControllers" id="sVf-yd-akv"/>
+                        <segue destination="Kvo-o3-T6h" kind="relationship" relationship="viewControllers" id="KnN-8x-Cp6"/>
+                        <segue destination="rww-MJ-PEw" kind="relationship" relationship="viewControllers" id="CtL-BM-UZ9"/>
+                        <segue destination="3Wb-wD-3cV" kind="relationship" relationship="viewControllers" id="LYv-Sm-Tab"/>
+                        <segue destination="ESE-hT-y0k" kind="relationship" relationship="viewControllers" id="gJB-ao-ZmQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AJF-Mg-5Sr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-214.5" y="-3"/>
+        </scene>
+        <!--节省资金-->
+        <scene sceneID="f1k-DP-dD7">
+            <objects>
+                <navigationController id="rww-MJ-PEw" customClass="BasicNavigationViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="节省资金" image="money_save" id="pEX-fq-5PR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pyc-Ao-Q7o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nMJ-tZ-mZx" kind="relationship" relationship="rootViewController" id="spj-Yr-xf1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oqW-Gg-yvd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592.5" y="-3"/>
+        </scene>
+        <!--返回主页-->
+        <scene sceneID="iUx-gF-76M">
+            <objects>
+                <viewController id="ESE-hT-y0k" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fha-4Z-smc"/>
+                        <viewControllerLayoutGuide type="bottom" id="G1a-Ib-8ht"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fsP-yO-D74">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="返回主页" image="back_home" id="Mn0-Kg-mKf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pi7-pr-Vks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-844.5" y="1553"/>
+        </scene>
+        <!--节省资金-->
+        <scene sceneID="qao-B1-sS9">
+            <objects>
+                <viewController id="nMJ-tZ-mZx" customClass="MoneySavedHistoryViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wYN-r6-6Ye"/>
+                        <viewControllerLayoutGuide type="bottom" id="Doh-ve-7cZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="caY-U9-PtA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3天内的资金节省状况" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mc1-F3-EMK">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jsp-DB-V1A" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Doh-ve-7cZ" firstAttribute="top" secondItem="Jsp-DB-V1A" secondAttribute="bottom" id="2Ea-Je-uVE"/>
+                            <constraint firstItem="Jsp-DB-V1A" firstAttribute="leading" secondItem="caY-U9-PtA" secondAttribute="leading" id="66U-Sg-VRP"/>
+                            <constraint firstAttribute="trailing" secondItem="mc1-F3-EMK" secondAttribute="trailing" constant="40" id="Y9H-tn-HPa"/>
+                            <constraint firstItem="Jsp-DB-V1A" firstAttribute="top" secondItem="mc1-F3-EMK" secondAttribute="bottom" constant="10" id="aPO-UF-ijW"/>
+                            <constraint firstItem="mc1-F3-EMK" firstAttribute="top" secondItem="wYN-r6-6Ye" secondAttribute="bottom" constant="10" id="cT2-Ke-RGr"/>
+                            <constraint firstItem="mc1-F3-EMK" firstAttribute="leading" secondItem="caY-U9-PtA" secondAttribute="leading" constant="40" id="did-d5-60Z"/>
+                            <constraint firstAttribute="trailing" secondItem="Jsp-DB-V1A" secondAttribute="trailing" id="yIk-RF-ap5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="mc1-F3-EMK"/>
+                                <exclude reference="Jsp-DB-V1A"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2Ea-Je-uVE"/>
+                                <exclude reference="Y9H-tn-HPa"/>
+                                <exclude reference="cT2-Ke-RGr"/>
+                                <exclude reference="did-d5-60Z"/>
+                                <exclude reference="66U-Sg-VRP"/>
+                                <exclude reference="aPO-UF-ijW"/>
+                                <exclude reference="yIk-RF-ap5"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="mc1-F3-EMK"/>
+                                <include reference="Jsp-DB-V1A"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2Ea-Je-uVE"/>
+                                <include reference="Y9H-tn-HPa"/>
+                                <include reference="cT2-Ke-RGr"/>
+                                <include reference="did-d5-60Z"/>
+                                <include reference="66U-Sg-VRP"/>
+                                <include reference="aPO-UF-ijW"/>
+                                <include reference="yIk-RF-ap5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="节省资金" id="8ZB-Fl-buS"/>
+                    <connections>
+                        <outlet property="lineChart" destination="Jsp-DB-V1A" id="iSS-Jf-Az5"/>
+                        <outlet property="pageDescriptionLabel" destination="mc1-F3-EMK" id="fOE-wX-h5B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FHj-y5-y7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1402.5" y="-3"/>
+        </scene>
+        <!--吸烟频率-->
+        <scene sceneID="h7y-UG-MTk">
+            <objects>
+                <navigationController title="吸烟频率" id="luD-qA-J7F" customClass="BasicNavigationViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="吸烟时间" image="smoke_time" id="mRI-k1-zQS"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VNg-vI-NqR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="n3U-2j-vVp" kind="relationship" relationship="rootViewController" id="jVJ-1E-fIt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FBv-6X-9CZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592.5" y="777"/>
+        </scene>
+        <!--吸烟数量-->
+        <scene sceneID="D8c-q7-rlU">
+            <objects>
+                <navigationController id="Kvo-o3-T6h" customClass="BasicNavigationViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="吸烟数量" image="smoke_num" id="Hg1-Ux-ayF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZiE-4y-JH1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Z7c-7Z-8gg" kind="relationship" relationship="rootViewController" id="gXJ-wH-8az"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKU-zl-KVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592.5" y="1553"/>
+        </scene>
+        <!--吸烟数量统计-->
+        <scene sceneID="NVn-4T-coO">
+            <objects>
+                <viewController id="Z7c-7Z-8gg" customClass="SmokingNumberViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0tU-Ob-pbA"/>
+                        <viewControllerLayoutGuide type="bottom" id="zLR-Xy-cka"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IAG-go-qKq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3天内的吸烟数量统计" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUZ-Ut-B6V">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pmt-7P-tky" customClass="HorizontalBarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pmt-7P-tky" firstAttribute="leading" secondItem="IAG-go-qKq" secondAttribute="leading" id="0fY-DW-39i"/>
+                            <constraint firstItem="zLR-Xy-cka" firstAttribute="top" secondItem="Pmt-7P-tky" secondAttribute="bottom" id="7oL-hX-p57"/>
+                            <constraint firstItem="Pmt-7P-tky" firstAttribute="top" secondItem="YUZ-Ut-B6V" secondAttribute="bottom" constant="10" id="P65-0A-IQs"/>
+                            <constraint firstAttribute="trailing" secondItem="Pmt-7P-tky" secondAttribute="trailing" id="WS6-qr-RGf"/>
+                            <constraint firstAttribute="trailing" secondItem="YUZ-Ut-B6V" secondAttribute="trailing" constant="20" id="cpZ-Tn-irm"/>
+                            <constraint firstItem="YUZ-Ut-B6V" firstAttribute="leading" secondItem="IAG-go-qKq" secondAttribute="leading" constant="20" id="nxd-E9-EV0"/>
+                            <constraint firstItem="YUZ-Ut-B6V" firstAttribute="top" secondItem="0tU-Ob-pbA" secondAttribute="bottom" constant="10" id="t7n-bJ-H9n"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="YUZ-Ut-B6V"/>
+                                <exclude reference="Pmt-7P-tky"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7oL-hX-p57"/>
+                                <exclude reference="cpZ-Tn-irm"/>
+                                <exclude reference="nxd-E9-EV0"/>
+                                <exclude reference="t7n-bJ-H9n"/>
+                                <exclude reference="0fY-DW-39i"/>
+                                <exclude reference="P65-0A-IQs"/>
+                                <exclude reference="WS6-qr-RGf"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="YUZ-Ut-B6V"/>
+                                <include reference="Pmt-7P-tky"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7oL-hX-p57"/>
+                                <include reference="cpZ-Tn-irm"/>
+                                <include reference="nxd-E9-EV0"/>
+                                <include reference="t7n-bJ-H9n"/>
+                                <include reference="0fY-DW-39i"/>
+                                <include reference="P65-0A-IQs"/>
+                                <include reference="WS6-qr-RGf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="吸烟数量统计" id="Hvf-Xk-Vaf"/>
+                    <connections>
+                        <outlet property="barChart" destination="Pmt-7P-tky" id="HSq-sr-XkF"/>
+                        <outlet property="pageDescriptionLabel" destination="YUZ-Ut-B6V" id="Tp4-V7-M4r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1j-Dm-OtZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1402.5" y="1553"/>
+        </scene>
+        <!--吸烟足迹-->
+        <scene sceneID="P0d-cs-6Yh">
+            <objects>
+                <navigationController id="3Wb-wD-3cV" customClass="BasicNavigationViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="吸烟足迹" image="smoke_place" id="DGc-vB-bL9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V4K-Cy-OeB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SGe-c8-tYr" kind="relationship" relationship="rootViewController" id="VM0-e9-hKN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WvC-B2-LN0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592.5" y="2367"/>
+        </scene>
+        <!--吸烟足迹-->
+        <scene sceneID="w4e-CA-NLK">
+            <objects>
+                <viewController id="SGe-c8-tYr" customClass="SmokingMapViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qsg-Hl-fql"/>
+                        <viewControllerLayoutGuide type="bottom" id="lrk-D7-0Nr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c2h-u5-wuS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3天内的吸烟位置记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQ9-Uh-n0z">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PhU-UY-NQq">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlx-Hv-6LS">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PhU-UY-NQq" firstAttribute="leading" secondItem="c2h-u5-wuS" secondAttribute="leading" constant="20" id="1NU-8K-j8s">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="Nlx-Hv-6LS" secondAttribute="trailing" id="205-IY-yvx">
+                                <variation key="widthClass=compact" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="PhU-UY-NQq" firstAttribute="top" secondItem="eQ9-Uh-n0z" secondAttribute="bottom" constant="40" id="7dA-9X-yE8">
+                                <variation key="widthClass=compact" constant="25"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="PhU-UY-NQq" secondAttribute="trailing" constant="20" id="BKc-i5-3uc">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="eQ9-Uh-n0z" firstAttribute="top" secondItem="qsg-Hl-fql" secondAttribute="bottom" constant="10" id="NJp-Ms-nql"/>
+                            <constraint firstAttribute="trailing" secondItem="eQ9-Uh-n0z" secondAttribute="trailing" constant="10" id="PFA-Ir-53Z"/>
+                            <constraint firstItem="PhU-UY-NQq" firstAttribute="top" secondItem="Nlx-Hv-6LS" secondAttribute="bottom" constant="8" id="a6c-Cl-kkK">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="Nlx-Hv-6LS" firstAttribute="leading" secondItem="c2h-u5-wuS" secondAttribute="leading" id="lwz-kZ-14Z">
+                                <variation key="widthClass=compact" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="lrk-D7-0Nr" firstAttribute="top" secondItem="PhU-UY-NQq" secondAttribute="bottom" constant="40" id="mBQ-Rv-fZH">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="eQ9-Uh-n0z" firstAttribute="leading" secondItem="c2h-u5-wuS" secondAttribute="leading" constant="10" id="xzv-YT-Plp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="eQ9-Uh-n0z"/>
+                                <exclude reference="PhU-UY-NQq"/>
+                                <exclude reference="Nlx-Hv-6LS"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="mBQ-Rv-fZH"/>
+                                <exclude reference="205-IY-yvx"/>
+                                <exclude reference="lwz-kZ-14Z"/>
+                                <exclude reference="NJp-Ms-nql"/>
+                                <exclude reference="PFA-Ir-53Z"/>
+                                <exclude reference="xzv-YT-Plp"/>
+                                <exclude reference="1NU-8K-j8s"/>
+                                <exclude reference="7dA-9X-yE8"/>
+                                <exclude reference="BKc-i5-3uc"/>
+                                <exclude reference="a6c-Cl-kkK"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="eQ9-Uh-n0z"/>
+                                <include reference="PhU-UY-NQq"/>
+                                <include reference="Nlx-Hv-6LS"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="mBQ-Rv-fZH"/>
+                                <include reference="205-IY-yvx"/>
+                                <include reference="lwz-kZ-14Z"/>
+                                <include reference="NJp-Ms-nql"/>
+                                <include reference="PFA-Ir-53Z"/>
+                                <include reference="xzv-YT-Plp"/>
+                                <include reference="1NU-8K-j8s"/>
+                                <include reference="7dA-9X-yE8"/>
+                                <include reference="BKc-i5-3uc"/>
+                                <include reference="a6c-Cl-kkK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="吸烟足迹" id="Bkf-R9-B9f"/>
+                    <connections>
+                        <outlet property="locationDescriptionLabel" destination="Nlx-Hv-6LS" id="eJe-Y6-7HH"/>
+                        <outlet property="mapView" destination="PhU-UY-NQq" id="aOr-M2-95k"/>
+                        <outlet property="pageDescriptionLabel" destination="eQ9-Uh-n0z" id="WLc-Dz-eri"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WnG-3j-gB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1402.5" y="2367"/>
+        </scene>
+        <!--吸烟时间统计-->
+        <scene sceneID="mac-0L-x4C">
+            <objects>
+                <viewController id="n3U-2j-vVp" customClass="SmokingTimesViewController" customModule="StopSmokingPrograms" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="azD-u3-CZw"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fy-iw-6pM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Hs-rf-THx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3天内的吸烟时间统计" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jT-jf-6Tc">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ef-L2-JZg" customClass="HorizontalBarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9jT-jf-6Tc" firstAttribute="leading" secondItem="7Hs-rf-THx" secondAttribute="leading" constant="20" id="8Sq-G0-Ql2"/>
+                            <constraint firstAttribute="trailing" secondItem="9jT-jf-6Tc" secondAttribute="trailing" constant="20" id="JCE-vP-afn"/>
+                            <constraint firstItem="8ef-L2-JZg" firstAttribute="leading" secondItem="7Hs-rf-THx" secondAttribute="leading" id="NNh-Tf-kX1"/>
+                            <constraint firstItem="9jT-jf-6Tc" firstAttribute="top" secondItem="azD-u3-CZw" secondAttribute="bottom" constant="10" id="PPm-yD-MPb"/>
+                            <constraint firstItem="8ef-L2-JZg" firstAttribute="top" secondItem="9jT-jf-6Tc" secondAttribute="bottom" constant="10" id="We6-5F-ySu"/>
+                            <constraint firstItem="2fy-iw-6pM" firstAttribute="top" secondItem="8ef-L2-JZg" secondAttribute="bottom" id="eqo-o8-fLA"/>
+                            <constraint firstAttribute="trailing" secondItem="8ef-L2-JZg" secondAttribute="trailing" id="vCh-fV-Btm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="9jT-jf-6Tc"/>
+                                <exclude reference="8ef-L2-JZg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="eqo-o8-fLA"/>
+                                <exclude reference="8Sq-G0-Ql2"/>
+                                <exclude reference="JCE-vP-afn"/>
+                                <exclude reference="PPm-yD-MPb"/>
+                                <exclude reference="NNh-Tf-kX1"/>
+                                <exclude reference="We6-5F-ySu"/>
+                                <exclude reference="vCh-fV-Btm"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="9jT-jf-6Tc"/>
+                                <include reference="8ef-L2-JZg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="eqo-o8-fLA"/>
+                                <include reference="8Sq-G0-Ql2"/>
+                                <include reference="JCE-vP-afn"/>
+                                <include reference="PPm-yD-MPb"/>
+                                <include reference="NNh-Tf-kX1"/>
+                                <include reference="We6-5F-ySu"/>
+                                <include reference="vCh-fV-Btm"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="吸烟时间统计" id="Lhd-Uj-86B"/>
+                    <connections>
+                        <outlet property="barChart" destination="8ef-L2-JZg" id="IFZ-L3-gjq"/>
+                        <outlet property="pageDescriptionLabel" destination="9jT-jf-6Tc" id="88H-MD-d7C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x6G-lO-8x2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1402.5" y="777"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back_home" width="113" height="110"/>
+        <image name="money_save" width="30" height="30"/>
+        <image name="smoke_num" width="30" height="30"/>
+        <image name="smoke_place" width="60" height="60"/>
+        <image name="smoke_time" width="60" height="60"/>
+    </resources>
+</document>
